@@ -38,8 +38,8 @@ class NapeEntity extends Entity
 	/**
 	 * Entity offsets.
 	 */
-	public var offset_x:Float;
-	public var offset_y:Float;
+	public var offset_x:Float = 0;
+	public var offset_y:Float = 0;
 	
 	/**
 	 * Constructor. Can be used to place the Entity and assign a graphic, mask and bodytype.
