@@ -36,6 +36,12 @@ class NapeEntity extends Entity
 	public var physics(get, set):Bool;
 	
 	/**
+	 * Entity offsets.
+	 */
+	public var offset_x:Float;
+	public var offset_y:Float;
+	
+	/**
 	 * Constructor. Can be used to place the Entity and assign a graphic, mask and bodytype.
 	 * @param	x			X position to place the Entity.
 	 * @param	y			Y position to place the Entity.
@@ -62,8 +68,9 @@ class NapeEntity extends Entity
 	 */
 	public override function update()
 	{
-		x = body.position.x;
-		y = body.position.y;
+		x = body.position.x + offset_x;
+		y = body.position.y + offset_y;
+		
 		if (graphic != null)
 			Reflect.setField(graphic, "angle", angle);
 			
@@ -131,3 +138,4 @@ class NapeEntity extends Entity
 		return value;
 	}
 }
+
