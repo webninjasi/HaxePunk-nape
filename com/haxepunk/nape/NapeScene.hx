@@ -120,8 +120,8 @@ class NapeScene extends Scene
 	
 	private function onResize(e:Event)
 	{
-		_debug.display.x = HXP.camera.x;
-		_debug.display.y = HXP.camera.y;
+		_debug.display.x = -HXP.camera.x;
+		_debug.display.y = -HXP.camera.y;
 		_debug.display.scaleX = HXP.screen.scaleX * HXP.screen.scale;
 		_debug.display.scaleY = HXP.screen.scaleY * HXP.screen.scale;
 	}
@@ -153,3 +153,4 @@ class NapeScene extends Scene
 	// Nape debug draw
 	private var _debug:Debug;
 }
+
