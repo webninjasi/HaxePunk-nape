@@ -71,7 +71,7 @@ class NapeEntity extends Entity
 		x = body.position.x + offset_x;
 		y = body.position.y + offset_y;
 		
-		if (graphic != null)
+		if (graphic != null && Reflect.hasField(graphic, "angle"))
 			Reflect.setField(graphic, "angle", angle);
 			
 		super.update();
